@@ -163,6 +163,10 @@ label {
 }
 
 
+main {
+  max-width: 33rem;
+  margin: 0 auto;
+}
 
 
 
@@ -174,7 +178,12 @@ form {
   flex-direction: column;
 }
 
-@media (min-width: 40em) {
+@media (min-width: 700px) {
+ 
+main {
+  max-width: 1020px;
+  margin: 0 auto;
+}
 .card {
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);

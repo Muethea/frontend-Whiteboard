@@ -147,6 +147,10 @@ export default {
 <style scoped>
 
 
+main {
+  max-width: 33rem;
+  margin: 0 auto;
+}
 .card {
   
   display: flex;
@@ -154,6 +158,7 @@ export default {
   margin-top: 6rem;
   
 }
+
 
 .back {
   
@@ -172,6 +177,10 @@ export default {
 
 @media (min-width: 700px) {
 
+main {
+  max-width: 1020px;
+  margin: 0 auto;
+}
 
 .back {
   padding: 3rem;
