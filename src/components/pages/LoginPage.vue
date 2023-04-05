@@ -114,6 +114,19 @@ export default {
 }
 </script>
 <style scoped>
+
+.btnlogin{
+  background-color: #4c49d1;
+  color: #fff;
+  width: 7rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: .5rem;
+}
+
+.btnlogin:hover{
+    background-color: #7673ed;
+}
 .card {
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);
@@ -132,21 +145,6 @@ export default {
 label {
   font-style: 600;
   font-size: 1.2rem;
-}
-
-.btnlogin {
-  border: none;
-  width: 8rem;
-  height: 3rem;
-  color: #fff;
-  font-size: 1.3rem;
-  border-radius: .3rem;
-  background: rgb(131, 58, 180);
-}
-
-.btnlogin:hover {
-  font-style: bold;
-  background: rgb(95, 63, 116);
 }
 
 
@@ -188,7 +186,7 @@ main {
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: blur(30px);
-width: 38rem;
+width: 30rem;
 margin: 0 auto;
   height: 26rem;
   padding: 3rem;
