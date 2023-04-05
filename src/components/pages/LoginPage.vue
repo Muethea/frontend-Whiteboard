@@ -2,6 +2,7 @@
   <main>
 
     <div class="back">
+      <h1>Well come back</h1>
     </div>
     <div class="loginform container ">
 
@@ -148,15 +149,21 @@ label {
   background: rgb(95, 63, 116);
 }
 
+
 .back {
+  padding: 3rem;
+  color:#fcfcff;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 0;
-  width: 200rem;
-  height: 22rem;
-  background: rgb(131, 58, 180);
-  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+  width: 50rem;
+  height: 100rem;
+  background:#bcd;
 }
+
+
+
 
 
 

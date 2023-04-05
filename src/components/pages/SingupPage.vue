@@ -2,8 +2,7 @@
   <div>
         <div class="back">
           <h1>Create an account</h1>
-          <div class="card1"></div>
-          <div class="card2"></div>
+      
 
         </div>
     <!-- Section: Design Block -->
