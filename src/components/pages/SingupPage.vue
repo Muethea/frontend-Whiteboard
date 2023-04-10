@@ -57,7 +57,7 @@
                 <!-- Submit button -->
                 <div class="btns">
                   <!-- Submit button -->
-                  <button type="submit" class="btn btn-primary btn-block mb-4">
+                  <button type="submit" class="btnSingup">
                     Sign up
                   </button>
 
@@ -145,7 +145,18 @@ export default {
 }
 </script>
 <style scoped>
+.btnSingup{
+  background-color: #4c49d1;
+  color: #fff;
+  width: 7rem;
+  height: 2.4rem;
+  border: none;
+  border-radius: .5rem;
+}
 
+.btnSingup:hover{
+    background-color: #7673ed;
+}
 
 main {
   max-width: 33rem;
