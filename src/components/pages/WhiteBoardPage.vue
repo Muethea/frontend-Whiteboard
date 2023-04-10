@@ -2,15 +2,13 @@
   <div class="flex-box">
     <canvas ref="canvas" class="canvas" width="700" height="500"></canvas>
     <div class="container__tools"> 
-      <button class="piscar" @click="addEditableText">
-        <font-awesome-icon icon="fa-solid fa-text" />
-      </button>
+   
       <button @click="addComment">
         <font-awesome-icon icon="fa-regular fa-comment" />
       </button>
-      <label for="font-select"
-        ><font-awesome-icon icon="fa-solid fa-font-case"
-      /></label>
+        <button class="piscar" @click="addEditableText">
+          <font-awesome-icon icon="fa-solid fa-text" />T
+        </button>
       <select id="font-select" v-model="selectedFont">
         <option value="Arial">Arial</option>
         <option value="Verdana">Verdana</option>
@@ -29,23 +27,21 @@
         <font-awesome-icon icon="fa-regular fa-circle" />
       </button>
       <button @click="addHexagon">
-        <font-awesome-icon icon="fa-regular fa-hexagon" />
+        <font-awesome-icon icon="fa-regular fa-hexagon" />Hex
       </button>
       <button @click="addTriangle">
-        <font-awesome-icon icon="fa-regular fa-triangle" />
+        <font-awesome-icon icon="fa-regular fa-triangle" />Tra
       </button>
       <button @click="addArrow">
         <font-awesome-icon icon="fa-solid fa-arrow-right" />
       </button>
 
-      <button @click="criarLinha">
-        <font-awesome-icon icon="fa-solid fa-pen-line" />
-      </button>
       <button @click="deleteSelected">Excluir selecionado</button>
 
       <input type="range" min="1" max="50" v-model="lineWidth" />
       <button @click="erase">
         <font-awesome-icon icon="fa-sharp fa-solid fa-eraser" />
+        apagar
       </button>
       <button @click="clearCanvas">
         <font-awesome-icon icon="fa-solid fa-broom" />
@@ -561,16 +557,24 @@ body {
 }
 
 .container__tools {
-  width: 62rem;
+  width: 80rem;
+  height: 60px;
+  gap: 2rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border: 1px solid rgb(252, 234, 206);
   border-radius: 10px;
-  background: rgb(148, 148, 148);
+  background: rgb(255, 255, 255);
 
   position: absolute;
   bottom: 0;
+}
+
+.canvas {
+  background-image: linear-gradient(1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #1c7cbb calc(100% - 1.5px)), linear-gradient(90deg, #1c7cbb 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #1c7cbb calc(100% - 1.5px));
+  background-size: 1% 1%;
+
 }
 </style>
