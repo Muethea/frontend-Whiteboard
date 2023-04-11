@@ -1,6 +1,6 @@
 <template>
     <div>
-  <NavBar/>
+
   <LoaderViewVue v-if="showLoading"/>
   <router-view></router-view>
     </div>
@@ -9,14 +9,13 @@
 <script>
 import { mapState } from 'vuex'
 import LoaderViewVue from './components/loader/LoaderView.vue'
-import NavBar from './components/Navbar/NavBarP.vue'
 import {  AUTO_LOGIN_ACTION } from './store/modules/auth/storeconstants'
 
 
 export default {
   name: 'App',
   components: {
-    NavBar,
+  
     LoaderViewVue
   },
 

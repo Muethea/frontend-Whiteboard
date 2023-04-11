@@ -176,8 +176,21 @@ form {
   flex-direction: column;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
  
+.back {
+  padding: 12rem;
+  color:#fcfcff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width:55rem;
+  height: 100rem;
+  background:#bcd;
+}
+
+
 main {
   max-width: 1020px;
   margin: 0 auto;
@@ -186,11 +199,11 @@ main {
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);
   backdrop-filter: blur(30px);
-width: 30rem;
+width: 40rem;
 margin: 0 auto;
   height: 26rem;
   padding: 3rem;
-  margin-top: 8rem;
+  margin-top: 15rem;
 }
 
 .card h2 {
@@ -198,5 +211,62 @@ margin: 0 auto;
   text-align: center;
 }
 
+}
+
+@media (max-width: 768px) {
+ 
+.back {
+  padding: 6rem;
+  color:#fcfcff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width:35rem;
+  height: 100rem;
+  background:#bcd;
+}
+
+
+main {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+.card {
+ 
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(30px);
+width: 35rem;
+margin: 0 auto;
+  height: 26rem;
+  padding: 3rem;
+  margin-top: 15rem;
+}
+
+.card h2 {
+    color: #000000;
+  text-align: center;
+}
+
+}
+@media  (max-width:480px) {
+  .card {
+  margin-top: -100px;
+  background: hsla(0, 0%, 100%, 0.8);
+  backdrop-filter: blur(30px);
+  display: flex;
+  justify-content: space-between;
+width: 20rem;
+margin: 0 auto;
+  height: 26rem;
+  padding: 2rem;
+  margin-top: 8rem;
+}
+
+.btns{
+  display: flex;
+  gap: 5rem;
+}
+  
 }
 </style>

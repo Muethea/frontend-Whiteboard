@@ -1,4 +1,5 @@
 <template>
+    <NavBarP/>
   <div class="new">
     <h3>Create a board</h3>
     <div class="row card-group " style="text-align: center;">
@@ -61,51 +62,40 @@ import { GET_USER_TOKEN_GETTER, LOADING_SPINNER_SHOW_MUTATION } from '@/store/mo
 
 import axiosInstance from '@/services/AxiosTokenInstance'
 import { mapGetters, mapMutations } from 'vuex'
+import NavBarP from '../Navbar/NavBarP.vue'
 export default {
+    data() {
+        return {
+            dashboard: [],
+        };
+    },
+    computed: {
+        ...mapGetters("auth", {
+            token: GET_USER_TOKEN_GETTER
+        })
+    },
 
-
-
-  data() {
-    return {
-      dashboard: [],
-
-    }
-  },
-
-
-  computed: {
-    ...mapGetters('auth', {
-      token: GET_USER_TOKEN_GETTER
-    })
-  },
-
-  mounted() {
-
-    this.showLoading(true)
-
-    axiosInstance.get(`https://login-vue-6c892-default-rtdb.firebaseio.com/posts.json`).then(response => {
-      this.formatDashboard(response.data)
-      this.showLoading(false)
-    }).catch(() => {
-      this.showLoading(false)
-    })
-  },
-
-  methods: {
-
-    ...mapMutations({
-      showLoading: LOADING_SPINNER_SHOW_MUTATION
-    }),
-
-    formatDashboard(dashboard) {
-      for (let key in dashboard) {
-        this.dashboard.push({ ...dashboard[key], id: key })
-      }
-
-      console.log(this.dashboard)
-    }
-
-  }
+    mounted() {
+        this.showLoading(true);
+        axiosInstance.get(`https://login-vue-6c892-default-rtdb.firebaseio.com/posts.json`).then(response => {
+            this.formatDashboard(response.data);
+            this.showLoading(false);
+        }).catch(() => {
+            this.showLoading(false);
+        });
+    },
+    methods: {
+        ...mapMutations({
+            showLoading: LOADING_SPINNER_SHOW_MUTATION
+        }),
+        formatDashboard(dashboard) {
+            for (let key in dashboard) {
+                this.dashboard.push({ ...dashboard[key], id: key });
+            }
+            console.log(this.dashboard);
+        }
+    },
+    components: { NavBarP }
 }
 </script>
 
