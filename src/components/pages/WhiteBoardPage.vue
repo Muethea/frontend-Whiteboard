@@ -8,7 +8,7 @@
         <font-awesome-icon icon="fa-regular fa-comment" />
       </button>
         <button class="piscar" @click="addEditableText">
-          <font-awesome-icon icon="fa-solid fa-text" />T
+            <span class="material-symbols-outlined">format_shapes</span>
         </button>
       <select id="font-select" v-model="selectedFont">
         <option value="Arial">Arial</option>
@@ -28,18 +28,19 @@
         <font-awesome-icon icon="fa-regular fa-circle" />
       </button>
       <button @click="addHexagon">
-        <font-awesome-icon icon="fa-regular fa-hexagon" />Hex
+        <span class="material-symbols-outlined">hexagon</span>
+        <font-awesome-icon icon="hexagon" />
+
       </button>
       <button @click="addTriangle">
-        <font-awesome-icon icon="fa-regular fa-triangle" />Tra
+        <span class="material-symbols-outlined">change_history</span>
       </button>
       <button @click="addArrow">
         <font-awesome-icon icon="fa-solid fa-arrow-right" />
       </button>
       <input type="range" min="1" max="50" v-model="lineWidth" />
       <button @click="erase">
-        <font-awesome-icon icon="fa-sharp fa-solid fa-eraser" />
-        apagar
+        <span class="material-symbols-outlined">format_ink_highlighter</span>
       </button>
       <button @click="clearCanvas">
         <font-awesome-icon icon="fa-solid fa-broom" />
@@ -494,5 +495,14 @@ button {
   background-image: linear-gradient(1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #1c7cbb calc(100% - 1.5px)), linear-gradient(90deg, #1c7cbb 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #1c7cbb calc(100% - 1.5px));
   background-size: 1% 1%;
 
+} 
+
+/* Icons */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 10,
+  'opsz' 10
 }
 </style>
