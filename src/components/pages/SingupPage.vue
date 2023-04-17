@@ -1,19 +1,31 @@
 <template>
   <div>
         <div class="back">
-          <h1>Create an account</h1>
-      
+     
+
+        <div class="card2">
+          <div class="pont"></div>
+          <p>Connect with your creativity </p>
 
         </div>
+
+          <div class="card3">
+                  <div class="pont"></div>
+            <p>Build, create, and innovate</p>
+
+          </div>
+
+              <div class="card4">
+                      <div class="pont"></div>
+              <p>Turn your ideas into reality </p>
+
+            </div>
+      </div>
     <!-- Section: Design Block -->
     <section class="signform">
 
 
-      <div class="card mx-4 mx-md-5 shadow-5-strong" style="
-          
-                                    background: hsla(0, 0%, 100%, 0.8);
-                                    backdrop-filter: blur(30px);
-                                    ">
+      <div class="card mx-4 mx-md-5 shadow-5-strong">
         <div class="card-body py-5 px-md-5">
 
           <div >
@@ -172,20 +184,49 @@ main {
 
 
 .back {
-  
+  padding: 3rem 3rem;
+  color:#fcfcff;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 0;
-  width: 200rem;
-  height: 29rem;
- background-image: url('https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  
+width: 100%;
+height: 24rem;
+background: #e7e7e7;
+  background-image: radial-gradient(#000 1%, transparent 5%),
+                    radial-gradient(#000 1%, transparent 5%);
+  background-position: 0 0, 25px 25px;
+  background-size: 60px 60px;
 }
 
+
+.card2, .card3, .card4{
+  padding: .4rem;
+}
+
+.card2{
+
+    background: orange;
+}
+
+.card3{
+  position: relative;
+  top: 2rem;
+  left: 3rem;
+  color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.card4{
+  padding-left: 3rem;
+    position: relative;
+    right: 5rem;
+  top: 4rem;
+
+    background: rgb(44, 7, 164);
+}
+.signform{
+  margin-top: 18rem;
+}
 @media (min-width: 700px) {
 
 main {
@@ -193,24 +234,33 @@ main {
   margin: 0 auto;
 }
 
+.loginform{
+  margin-top: 14rem;
+}
+
+
 .back {
-  padding: 3rem;
+  padding: 3rem 3rem;
+
   color:#fcfcff;
   position: fixed;
   top: 0;
   left: 0;
+  width: 34rem;
+  height: 100%;
   z-index: 0;
-  width: 50rem;
-  height: 100rem;
-  background:#bcd;
+ background-color: #f2f2f2;
+  background-image: radial-gradient(#000 5%, transparent 5%),
+                    radial-gradient(#000 5%, transparent 5%);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
 }
-
-
 
   *{
     box-sizing: border-box;
   }
   .signform{
+    
       display: flex;
   justify-content: center;
 
@@ -232,6 +282,54 @@ input{
 }
 
 
+.card2, .card3, .card4{
+  padding: 1.4rem;
+  width: 10rem;
+    border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+                    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+ 
+  font-size: 18px;
+  transform: rotate(-3deg);
+
+}
+
+.pont{
+  position: relative;
+  top: -3rem;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../../assets/piker.png');
+  background-position: center;
+  background-size: 3rem;
+  
+  clip-path: circle();
+}
+
+.card2{
+  transform: rotate(-30deg);
+
+    background: orange;
+}
+
+.card3{
+  position: relative;
+  top: 4rem;
+  left: 14rem;
+  color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.card4{
+    position: relative;
+  top: 7rem;
+    left: 1rem;
+    background: rgb(44, 7, 164);
+}
 
 }
 </style>

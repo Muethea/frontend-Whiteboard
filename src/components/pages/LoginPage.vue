@@ -2,7 +2,25 @@
   <main>
 
     <div class="back">
-      <h1>Well come back</h1>
+     
+
+      <div class="card2">
+        <div class="pont"></div>
+        <p>Connect with your creativity </p>
+
+      </div>
+
+        <div class="card3">
+                <div class="pont"></div>
+          <p>Build, create, and innovate</p>
+
+        </div>
+
+            <div class="card4">
+                    <div class="pont"></div>
+            <p>Turn your ideas into reality </p>
+
+          </div>
     </div>
     <div class="loginform container ">
 
@@ -115,6 +133,7 @@ export default {
 </script>
 <style scoped>
 
+
 .btnlogin{
   background-color: #4c49d1;
   color: #fff;
@@ -149,17 +168,49 @@ label {
 
 
 .back {
-  padding: 3rem;
+  padding: 3rem 3rem;
   color:#fcfcff;
   position: fixed;
   top: 0;
-  left: 0;
   z-index: 0;
-  width: 50rem;
-  height: 100rem;
-  background:#bcd;
+width: 100%;
+height: 24rem;
+background: #e7e7e7;
+  background-image: radial-gradient(#000 1%, transparent 5%),
+                    radial-gradient(#000 1%, transparent 5%);
+  background-position: 0 0, 25px 25px;
+  background-size: 60px 60px;
 }
 
+
+.card2, .card3, .card4{
+  padding: .4rem;
+}
+
+.card2{
+
+    background: orange;
+}
+
+.card3{
+  position: relative;
+  top: 2rem;
+  left: 3rem;
+  color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.card4{
+  padding-left: 3rem;
+    position: relative;
+    right: 5rem;
+  top: 4rem;
+
+    background: rgb(44, 7, 164);
+}
+.loginform{
+  margin-top: 20rem;
+}
 
 main {
   max-width: 33rem;
@@ -177,24 +228,76 @@ form {
 }
 
 @media (min-width: 768px) {
- 
+.loginform{
+  margin-top: 14rem;
+}
+
+
 .back {
-  padding: 12rem;
+
   color:#fcfcff;
   position: fixed;
   top: 0;
   left: 0;
+  width: 34rem;
+  height: 100%;
   z-index: 0;
-  width:55rem;
-  height: 100rem;
-  background:#bcd;
+ background-color: #f2f2f2;
+  background-image: radial-gradient(#000 5%, transparent 5%),
+                    radial-gradient(#000 5%, transparent 5%);
+  background-position: 0 0, 25px 25px;
+  background-size: 50px 50px;
 }
 
+.card2, .card3, .card4{
+  padding: 1.4rem;
+  width: 10rem;
+    border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 2px, transparent 2px),
+                    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+ 
+  font-size: 18px;
+  transform: rotate(-3deg);
 
-main {
-  max-width: 1020px;
-  margin: 0 auto;
 }
+
+.pont{
+  position: relative;
+  top: -3rem;
+  left: -2rem;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../../assets/piker.png');
+  background-position: center;
+  background-size: 3rem;
+  
+  clip-path: circle();
+}
+
+.card2{
+  transform: rotate(-30deg);
+
+    background: orange;
+}
+
+.card3{
+  position: relative;
+  top: 4rem;
+  left: 14rem;
+  color: #000000;
+    background: rgb(255, 255, 255);
+}
+
+.card4{
+    position: relative;
+  top: 7rem;
+    left: 1rem;
+    background: rgb(44, 7, 164);
+}
+
 .card {
   margin-top: -100px;
   background: hsla(0, 0%, 100%, 0.8);
@@ -213,60 +316,5 @@ margin: 0 auto;
 
 }
 
-@media (max-width: 768px) {
- 
-.back {
-  padding: 6rem;
-  color:#fcfcff;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  width:35rem;
-  height: 100rem;
-  background:#bcd;
-}
 
-
-main {
-  max-width: 1020px;
-  margin: 0 auto;
-}
-.card {
- 
-  background: hsla(0, 0%, 100%, 0.8);
-  backdrop-filter: blur(30px);
-width: 35rem;
-margin: 0 auto;
-  height: 26rem;
-  padding: 3rem;
-  margin-top: 15rem;
-}
-
-.card h2 {
-    color: #000000;
-  text-align: center;
-}
-
-}
-@media  (max-width:480px) {
-  .card {
-  margin-top: -100px;
-  background: hsla(0, 0%, 100%, 0.8);
-  backdrop-filter: blur(30px);
-  display: flex;
-  justify-content: space-between;
-width: 20rem;
-margin: 0 auto;
-  height: 26rem;
-  padding: 2rem;
-  margin-top: 8rem;
-}
-
-.btns{
-  display: flex;
-  gap: 5rem;
-}
-  
-}
 </style>

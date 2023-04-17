@@ -2,56 +2,41 @@
     <NavBarP/>
   <div class="new">
     <h3>Create a board</h3>
-    <div class="row card-group " style="text-align: center;">
+    <div>
       <div class="col-sm-3">
+         <router-link to="/whiteboard">
         <div class="card">
           <div class="card-body1 cardnew">
-            <router-link to="/whiteboard">
+           
               <font-awesome-icon icon="fa-solid fa-circle-plus" />
-            </router-link>
+           
             <h5 class="card-title">New board</h5>
           </div>
+          
         </div>
+         </router-link>
       </div>
 
     </div>
   </div>
 
 
+  <div class="back">
   <div class="recent">
-    <h3>Recent boards</h3>
-    <div class="row card-group row-cols-1 row-cols-md-2 g-5">
-      <div class="col" v-for="titles in dashboard" :key="titles.id">
+    <h5>Recent boards</h5>
+
+    <div class="card-grup">
+      <div  v-for="titles in dashboard" :key="titles.id">
         <div class="card">
-          <!-- Split dropend button -->
-          <div class="btn-group dropend">
-            <button type="button" class="btn btn-secondary">
-              Split dropend
-            </button>
-            <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <font-awesome-icon icon="fa-solid fa-ellipsis-vertical" />
-            </button>
-            <ul class="dropdown-menu">
-              <a class="dropdown-item" href="#">Share</a>
-              <a class="dropdown-item" href="#">Rename</a>
-              <a class="dropdown-item" href="#">Duplicate</a>
-
-              <a class="dropdown-item bg-danger" href="#">Delete</a>
-
-            </ul>
-          </div>
-
           <div class="card-body">
-            <h5 class="card-title">{{ titles.title }} </h5>
-            <p class="card-text">{{ titles.description }}</p>
           </div>
           <div class="card-footer">
-            <small class="text-muted">Last updated 3 mins ago</small>
+           <h5 class="card-title">{{ titles.title }} </h5>
           </div>
         </div>
       </div>
 
+    </div>
     </div>
   </div>
 </template>
@@ -100,19 +85,31 @@ export default {
 </script>
 
 <style scoped>
+
 .new {
   margin: 3rem 2rem;
+
 }
 
 .card-group {
   margin: 0 1rem;
 }
 
+.back{
+  margin-top: 8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.206);
+  height: 60vh;
+  background: rgba(210, 210, 210, 0.244);
+}
 .recent {
-  margin: 10rem 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  margin: 2rem 2rem;
 }
 
 .card-body1 {
+   width: 22rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,12 +117,26 @@ export default {
   gap: 2rem;
 }
 
+.card{
+  cursor: pointer;
+  width: 22rem;
+  height: 15rem;
+}
+
 .cardnew {
 
   height: 15rem;
 }
 
-@media (min-width: 40em){
-  
+.card-grup{
+  padding-top: 2rem;
+  display: grid;
+  display: flex;
+  gap: 1rem;
 }
+
+.card:hover{
+  border: 3px solid rgba(46, 46, 135, 0.317);
+}
+
 </style>

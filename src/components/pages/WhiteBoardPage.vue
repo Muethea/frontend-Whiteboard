@@ -10,13 +10,6 @@
         <button class="piscar" @click="addEditableText">
             <span class="material-symbols-outlined">format_shapes</span>
         </button>
-      <select id="font-select" v-model="selectedFont">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Times New Roman">Times New Roman</option>
-        <option value="Courier New">Courier New</option>
-        <option value="Comic Sans MS">Comic Sans MS</option>
-      </select>
       <button @click="draw">
         <font-awesome-icon icon="fa-solid fa-pencil" />
       </button>
@@ -476,19 +469,22 @@ button {
 }
 
 .container__tools {
-  width: 70rem;
-  height: 60px;
-  gap: 2rem;
-  margin: 0 auto;
+
+
+    width: 5rem;
+  gap: 1.2rem;
+  padding: 2rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(252, 234, 206);
   border-radius: 10px;
   background: rgb(255, 255, 255);
 
-  position: absolute;
-  bottom: 0;
+  position: fixed;
+  left: 0;
+
 }
 
 .canvas {

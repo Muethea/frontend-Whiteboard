@@ -34,7 +34,7 @@ export default {
 <style>
 body{
   font-family: 'Poppins', sans-serif;
-  background: rgb(238, 238, 238);
+  background: #fff;
 }
 .btns{
   display: flex;
