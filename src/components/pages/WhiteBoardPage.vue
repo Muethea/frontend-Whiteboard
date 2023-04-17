@@ -14,23 +14,35 @@
         <font-awesome-icon icon="fa-solid fa-pencil" />
       </button>
       <input type="color" v-model="selectedColor" />
-      <button @click="addSquare">
-        <font-awesome-icon icon="fa-regular fa-square" />
-      </button>
-      <button @click="addCircle">
-        <font-awesome-icon icon="fa-regular fa-circle" />
-      </button>
-      <button @click="addHexagon">
-        <span class="material-symbols-outlined">hexagon</span>
-        <font-awesome-icon icon="hexagon" />
 
-      </button>
-      <button @click="addTriangle">
-        <span class="material-symbols-outlined">change_history</span>
-      </button>
-      <button @click="addArrow">
-        <font-awesome-icon icon="fa-solid fa-arrow-right" />
-      </button>
+        <div>
+        <button @click="showSubButtons = !showSubButtons" >Abrir aba</button>
+        <div v-if="showSubButtons" class="aba">
+            <div class="tools1">
+       <button @click="addSquare">
+                <font-awesome-icon icon="fa-regular fa-square" />
+              </button>
+              <button @click="addCircle">
+                <font-awesome-icon icon="fa-regular fa-circle" />
+              </button>
+              <button @click="addHexagon">
+                <span class="material-symbols-outlined">hexagon</span>
+
+              </button>
+            </div>
+
+       <div class="tools">
+       <button @click="addTriangle">
+                <span class="material-symbols-outlined">change_history</span>
+              </button>
+              <button @click="addArrow">
+                <font-awesome-icon icon="fa-solid fa-arrow-right" />
+              </button>
+       </div>
+       
+        </div>
+      </div>
+      
       <input type="range" min="1" max="50" v-model="lineWidth" />
       <button @click="erase">
         <span class="material-symbols-outlined">format_ink_highlighter</span>
@@ -100,10 +112,17 @@ export default {
             editableText: null,
             drawing: false,
             linha: null,
+            showSubButtons: false,
+             isDrawing: false,
+            hexagon: null,
+            hexX: 0,
+            hexY: 0,
+            hexRadius: 0
         };
     },
     methods: {
         addSquare() {
+                 this.showSubButtons =false,
             this.drawingCircle = false;
             // Defina a variável de desenho como verdadeira
             this.drawing = true;
@@ -152,7 +171,7 @@ export default {
             });
         },
         addCircle() {
-            // Defina a variável de desenho como verdadeira
+                 this.showSubButtons = false,
             this.drawing = true;
             this.canvas.discardActiveObject();
             this.canvas.renderAll();
@@ -209,7 +228,8 @@ export default {
             });
         },
         addTriangle() {
-            // Defina a variável de desenho como verdadeira
+
+             this.showSubButtons = false,
             this.drawingTriangle = true;
             this.drawingSquare = false;
             this.drawingCircle = false;
@@ -254,6 +274,7 @@ export default {
             });
         },
         addHexagon() {
+                  this.showSubButtons = false,
             // Defina a variável de desenho como verdadeira
             this.drawingHexagon = true;
             // Limpe a seleção atual no canvas
@@ -299,7 +320,7 @@ export default {
             });
         },
         addArrow() {
-            // Defina a variável de desenho como verdadeira
+                this.showSubButtons = false,
             this.drawingArrow = true;
             // Limpe a seleção atual no canvas
             this.canvas.discardActiveObject();
@@ -349,6 +370,7 @@ export default {
             });
         },
         clearCanvas() {
+                this.showSubButtons = false,
             // Limpa o canvas
             this.canvas.clear();
             // Remove todos os eventos de mouse do canvas
@@ -471,11 +493,11 @@ button {
 .container__tools {
 
 
-    width: 5rem;
+    width: 45rem;
+    height: 4rem;
   gap: 1.2rem;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(252, 234, 206);
@@ -483,7 +505,9 @@ button {
   background: rgb(255, 255, 255);
 
   position: fixed;
-  left: 0;
+    bottom: 1rem;
+
+ box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.348);
 
 }
 
@@ -500,5 +524,25 @@ button {
   'wght' 400,
   'GRAD' 10,
   'opsz' 10
+}
+
+.aba{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 10rem;
+    height: 6rem;
+    position: absolute;
+    background: #fff;
+    top: -6rem;
+ box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.348);
+
+}
+
+.tools1{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 </style>

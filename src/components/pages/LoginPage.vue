@@ -228,12 +228,21 @@ form {
 }
 
 @media (min-width: 768px) {
+
+  main{
+    max-width: 20%;
+    margin: 0 auto;
+  }
 .loginform{
+
   margin-top: 14rem;
+
 }
 
 
+
 .back {
+
 
   color:#fcfcff;
   position: fixed;

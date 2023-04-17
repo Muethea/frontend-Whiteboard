@@ -227,15 +227,19 @@ background: #e7e7e7;
 .signform{
   margin-top: 18rem;
 }
-@media (min-width: 700px) {
 
-main {
-  max-width: 1020px;
-  margin: 0 auto;
-}
 
+
+@media (min-width: 700px)   {
+
+
+relative
 .loginform{
   margin-top: 14rem;
+}
+
+main{
+  position: relative;
 }
 
 
