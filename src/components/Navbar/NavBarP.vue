@@ -7,6 +7,7 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
         
@@ -56,8 +57,12 @@ export default {
     }
 
     .menu{
+      padding: 1rem 0rem;
      position: relative;
+     display: grid;
+     align-items: center;
       background: #fff;
+     
       border-bottom: 1px solid rgba(0, 0, 0, 0.124);
  
     }

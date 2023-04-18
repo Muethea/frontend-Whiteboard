@@ -1,9 +1,12 @@
 <template>
     <NavBarP/>
-  <div class="new">
+
+    <main>
+
+    <div class="new">
     <h3>Create a board</h3>
     <div>
-      <div class="col-sm-3">
+      <div class="card1">
          <router-link to="/whiteboard">
         <div class="card">
           <div class="card-body1 cardnew">
@@ -22,6 +25,7 @@
 
 
   <div class="back">
+    
   <div class="recent">
     <h5>Recent boards</h5>
 
@@ -39,6 +43,8 @@
     </div>
     </div>
   </div>
+        
+      </main>
 </template>
 
 <script>
@@ -86,15 +92,78 @@ export default {
 
 <style scoped>
 
+
 .new {
   margin: 3rem 2rem;
 
 }
 
-.card-group {
-  margin: 0 1rem;
+.card1{
+    max-width: 20rem;
+  margin: 0 auto;
 }
 
+.back{
+   
+  margin-top: 8rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.206);
+  height: 100vh;
+  background: rgba(210, 210, 210, 0.244);
+}
+.recent {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  margin: 2rem 2rem;
+}
+
+.card-body1 {
+   width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card{
+  cursor: pointer;
+  width: 22rem;
+  height: 15rem;
+}
+
+.cardnew {
+
+  height: 15rem;
+}
+
+.card-grup{
+    max-width: 20rem;
+  margin: 0 auto;
+  padding-top: 2rem;
+  display: grid;
+   flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+
+.card:hover{
+  border: 3px solid rgba(46, 46, 135, 0.317);
+}
+
+@media (min-width: 700px) {
+
+.new {
+  margin: 3rem 2rem;
+
+}
+
+
+
+.card1{
+    max-width: none;
+  margin: 0 auto;
+}
 .back{
   margin-top: 8rem;
   border-top: 1px solid rgba(0, 0, 0, 0.206);
@@ -129,8 +198,11 @@ export default {
 }
 
 .card-grup{
+   max-width: none;
+  margin: 0 auto;
   padding-top: 2rem;
   display: grid;
+   flex-direction: row;
   display: flex;
   gap: 1rem;
 }
@@ -138,5 +210,8 @@ export default {
 .card:hover{
   border: 3px solid rgba(46, 46, 135, 0.317);
 }
+}
+
+
 
 </style>
