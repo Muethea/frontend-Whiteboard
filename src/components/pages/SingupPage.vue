@@ -32,7 +32,7 @@
             <div >
           
               <form @submit.prevent="Signup()">
-                    <h2 class="fw-bold mb-5" style="text-align: center;">Sign up now</h2>
+                    <h2 class="fw-bold mb-5">Sign up now</h2>
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row">
                   <div class="col-md-6 mb-4">
@@ -175,6 +175,7 @@ main {
   margin: 0 auto;
 }
 .card {
+  border: none;
   
   display: flex;
   justify-content: center;
